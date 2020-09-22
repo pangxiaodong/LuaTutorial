@@ -33,11 +33,13 @@ print(not not nil)  --> false
 
 
 -- 字符串连接
+-- 1.  +连起来的是number
+-- 2. ..连起来的是string
 --[[
 print("Hello " .. "World")  --> Hello World
-print(0 .. 1)               --> 01，结果是字符粗
+print(0 .. 1)               --> 01，结果是字符串
 print(type("0" +  "1" + "1") .. " " .. ("0" +  "1" + "1"))   --> number 2
-print(type("0" +  1  +  1) .. " " .. ("0" +  1  +  1))     --> number 2
+print(type("0" +  1  +  1)   .. " " .. ("0" +  1  +  1))     --> number 2
 --]]
 
 

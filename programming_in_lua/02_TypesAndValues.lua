@@ -8,6 +8,7 @@ print(type(type))           --> function
 print(type(true))           --> boolean
 print(type(nil))            --> nil
 print(type(type(X)))        --> string
+print({})                   --> table: 0000000001019b10
 --]]
 
 

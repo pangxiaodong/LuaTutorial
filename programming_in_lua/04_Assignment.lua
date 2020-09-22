@@ -23,8 +23,15 @@ if a<b then
   print(a)   --> nil
 end          -- ends the block started at `then'
 print(a,b)   -->  1   10
--- 2. 常用方式，这样相当于一份深拷贝，而且访问local的速度更快。
-local foo = foo
+-- 2. 常用方式，不改变原来的值，而且访问local的速度更快。
+--    注意，对于table来说，并不是深度拷贝。而是table地址的拷贝。
+foo = 100
+do
+    local foo = foo
+    foo = 0
+    print("local foo " .. foo)
+end
+print("global foo " .. foo)
 -- 3. 增加作用域的方式 do-end，类似C#中的{}
 do
     local x = 10
